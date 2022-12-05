@@ -1,0 +1,52 @@
+env:
+  browser: true
+  es2021: true
+  node: true
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/recommended
+overrides: []
+parser: '@typescript-eslint/parser'
+parserOptions:
+  ecmaVersion: latest
+  sourceType: module
+plugins:
+  - '@typescript-eslint'
+rules:
+  indent:
+    - error
+    - 2
+  linebreak-style:
+    - error
+    - windows
+  quotes:
+    - error
+    - double
+  semi:
+    - error
+    - never
+  # 不允许空行上的尾随空白
+  no-trailing-spaces:
+    - error
+  # 禁止在单个语句中使用多个分配
+  no-multi-assign:
+    - error
+  # 禁止连续多个空格
+  no-multi-spaces:
+    - error
+  # 变量名强制用驼峰
+  camelcase:
+    - error
+  '@typescript-eslint/no-unused-vars':
+    - error
+  # 逗号后面需要空格
+  comma-spacing:
+    - error
+  # 不允许使用 ==
+  eqeqeq:
+    - error
+    - always
+  # 末尾不允许添加逗号
+  comma-dangle:
+    - error
+    - never
